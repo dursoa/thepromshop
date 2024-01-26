@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>The Prom Shop</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family:"Times New Roman", serif}
+h1,h2,h3,h4,h5,h6 {font-family:serif; letter-spacing:5px}
+</style>
+<body>
+
+<!-- Start Content -->
+<div id="home" class="w3-content">
+
+<!-- Image -->
+<img src="" alt="Catering" style="width:100%">
+
+<!-- End Content -->
+</div>
+<div class="w3-top w3-bar w3-white w3-padding w3-card w3-wide">
+    <a href="#home" class="w3-bar-item w3-button">The Prom Shop</a>
+    
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button">About</a>
+    <a href="menu.html" class="w3-bar-item w3-button">Dresses</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    </div>
+    </div>
+<div id="about" class="w3-padding-top-64">
+    <div class="w3-row">
+        
+     <div class="w3-half w3-padding-large w3-hide-small">
+    <div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" src="images/slidshow1.jpg" style="width:100%">
+  <img class="mySlides" src="images/slideshow2.PNG" style="width:100%">
+  <img class="mySlides" src="images/slideshow3.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+    </div>
+        
+    <div class="w3-half w3-padding-large">
+     <h1 class="w3-center">About The Shop</h1><br>
+     <h5 class="w3-center">Opened Since 2016</h5>
+     <p class="w3-large">
+      Picture this: a prom dress store is a place where elegance and dreams merge. As you step through the doors, you're greeted by a dazzling array of gowns, each one shimmering under the soft boutique lighting. The walls are lined with dresses in every conceivable color, from deep, romantic reds to ethereal pastels, each dress waiting to tell its own story on the dance floor. The store's ambiance whispers luxury, with plush carpets that hush your steps and large, ornate mirrors that reflect your transformed self. It's not just a shop; it's a realm where every fitting feels like a step closer to prom royalty. Expert stylists glide between the racks, ready to offer advice on the perfect cut to flatter each unique figure and personality, ensuring that every detail, from the neckline to the hem, is just right. A prom dress boutique isn't simply about selling dresses; it's about curating experiences and memories. It offers a haven for young women to explore their personal style and embrace a moment of transformation, with a promise of quality that extends from the luxurious fabrics to the intricate beadwork and beyond. This is where the journey to an unforgettable prom night begins, with a dress that's not just worn, but becomes a part of the story of one's youth.    <p class="w3-large w3-text-grey w3-hide-medium">
+    </div>
+        
+        </div>
+        </div>
+
+<!-- Slideshow -->
+<div class="footer">
+  <p><small>All content copyright &copy; A.Durso 2023, Walpole High School</small></p>
+  </div>
+</body>
+</html>
